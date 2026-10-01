@@ -14,7 +14,7 @@ jobs:
           server_port: 587
           username: ${{ secrets.SMTP_USERNAME }}
           password: ${{ secrets.SMTP_PASSWORD }}
-          subject: "New Push to Repository"
+          subject: "New Push to Repository ${{github.repository}}"
           from: "christoferkrabbi@gmail.com"
-          body: "A new push has been made to the repository."
+          body: "A new push has been made to the ${{github.repository}} repository by ${{github.event.pusher.name}}. Commit message: ${{github.event.head_commit.message}}"
           to: christoferkrabbi@gmail.com
