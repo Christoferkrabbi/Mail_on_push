@@ -15,5 +15,6 @@ jobs:
           username: ${{ secrets.SMTP_USERNAME }}
           password: ${{ secrets.SMTP_PASSWORD }}
           subject: "New Push to Repository"
+          from: "christoferkrabbi@gmail.com"
           body: "A new push has been made to the repository."
           to: christoferkrabbi@gmail.com
